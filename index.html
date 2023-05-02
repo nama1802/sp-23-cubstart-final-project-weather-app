@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Added Bootstrap CDN for styling functionality-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+    
+    <!-- Linked CSS -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@200;600&family=Emblema+One&family=Flavors&family=Rubik+Dirt&family=Rubik+Microbe&display=swap" rel="stylesheet">
+    
+    <!-- Added jQuery CDN to load data from the openweathermap.org API -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
+
+    <!-- Added moment.js for time/date referrence/functionality-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+
+    
+    <title>CliffFinder</title>
+</head>
+<body>
+    <!-- NAVBAR using Bootstrap Components -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-blue"> 
+            <div class="container" id="top">
+                <a class="navbar-brand" href="#weather-text">CliffFinder</a>
+            </div>
+        </nav>
+
+    <!-- LAYOUT using Bootstrap Grid-System -->   
+    <div class="container">
+        <!-- Rows (!! Up to 12 units !!) added for City Search, Current Weather Conditions, and 5-Day Forecast -->
+        <div class="row">
+            <div class="col-3 bg-city">
+                <h4>Search by Crag:</h4>
+                <!-- div form to input city -->
+                <form id="city-form">
+                    <div><input type="text" id="city-name"></div>
+                    <div><input type="submit"></div>
+                </form>
+                <!-- input form to display Recent Searches in localStorage -->
+                <ul class="nav flex-column" id="search">
+                    <li class="nav-item">Recent Searches</li>
+                    <input type="text" class="form-control" id="" placeholder="">
+                </ul>
+                <!-- added Clear All button to clear user input/add functionality -->
+                <button>Clear All</button>
+            </div> 
+
+            <div id="show"></div>
+    <div>
+        <!-- div container that stores current weather conditions for getWeather(city); function in script.js -->
+        <div class="container">
+            <div class="col-9 weather-conditions">
+                <h4>Current Weather Conditions</h4>
+                <div id="city"></div>
+                <div id="date"></div>
+                <div id="description"></div>
+                <div id="icon"></div>
+                <div id="temp"></div>
+                <div id="humidity"></div>
+                <div id="speed"></div>
+                <div id="index"></div>
+            </div>
+            <div class="col-8 climbing-conditions" id="climbing-conditions">
+                <h4>Current Climbing Conditions:</h4>
+                <div id="climbing_conditions"></div>
+            </div>
+        </div>
+       <!-- Used Bootstrap Cards model to create 5-day forecast templates -->
+       <!-- Need to add functionality -->
+        <div class="container-fluid">
+            <h4>
+                5-Day Forecast:
+            </h4>
+            <div class="card text-white bg-primary mb-3" style="max-width: 9rem;">
+                <div class="dayOne">
+                    <p class="temp"></p>
+                    <p class="humidity"></p>
+                    <div id="dayOneImg"></div>
+                    <div id="climbing-conditions1"></div>
+                </div> 
+        </div>
+            <div class="card text-white bg-primary mb-3" style="max-width: 9rem;">
+                <div class="dayTwo">
+                    <p class="temp"></p>
+                    <p class="humidity"></p>
+                    <div id="dayTwoImg"></div>
+                    <div id="climbing-conditions2"></div>
+                </div>
+        </div>
+            <div class="card text-white bg-primary mb-3" style="max-width: 9rem;">
+                <div class="dayThree">
+                    <p class="temp"></p>
+                    <p class="humidity"></p>
+                    <div id="dayThreeImg"></div>
+                    <div id="climbing-conditions3"></div>
+                </div>
+        </div>
+            
+        <div class="card text-white bg-primary mb-3" style="max-width: 9rem;">
+                <div class="dayFour">
+                    <p class="temp"></p>
+                    <p class="humidity"></p>
+                    <div id="dayFourImg"></div>
+                    <div id="climbing-conditions4"></div>
+                </div>
+        </div>
+
+        <div class="card text-white bg-primary mb-3" style="max-width: 9rem;">
+                <div class="dayFive">
+                    <p class="temp"></p>
+                    <p class="humidity"></p>
+                    <div id="dayFiveImg"></div>
+                    <div id="climbing-conditions5"></div>
+                </div>
+        </div>
+
+     <script src="script.js">
+        
+        /* adding for loop to get and store local storage */
+        var cityName = document.getElementById("city-name");
+        
+    
+        for (var i = 0; i  < localStorage.length; i++){
+            var key = localStorage.key(i);
+            var value = localStorage.getItem(key);
+
+            localStorOutput.innerHTML += `${key}: ${value}<br />`;
+        }
+
+     </script>            
+</body>
+</html>  
