@@ -1,0 +1,101 @@
+body {
+    margin: 50px auto;
+    max-width: 1000px;
+    color: #ffffff;
+    font-family: 'Anek Bangla', sans-serif;
+    background-color: #ffffff;
+    font-weight: 500;
+}
+
+.navbar-brand {
+    font-size: 30px;
+    font-weight: 2px;
+    font-family: 'Anek Bangla', sans-serif;
+ }
+ 
+ .a {
+    text-align: center;
+    font-weight: bold;
+ }
+ 
+ h2 {
+    font-weight: bold;
+ }
+
+ .bg-city {
+     padding: 10px;
+     background-color: #047bff;
+     border-radius: 15px; 
+ }
+ 
+ .nav-item {
+     font-size: 20px;
+     margin-top: 10px;
+     padding: 10px;
+     border-radius: 15px;
+ }
+ 
+ .weather-conditions {
+     background-color: #047bff;
+     width: 500px;
+     margin-top: 10px;
+     margin-bottom: 20px;
+     padding: 10px;
+     border-radius: 15px;
+ }
+ 
+ .card {
+     display: inline-block;
+ }
+
+ .currentCondition {
+    text-align: left;
+    width: 350px;
+    padding: 10px 20px;
+    border-radius: 15px;
+ }
+
+ #city-name{
+     border: 20px;
+ }
+
+ #climbing-conditions {
+    background-color: #047bff;
+    width: 500px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 15px;
+ }
+
+ #climbing_conditions {
+     font: 25;
+     font-weight: bold;
+ }
+
+#top {
+    background-color: #047bff;
+    border-radius: 15px; 
+    border: 20px;
+}
+
+img {
+    border: 10px; 
+    border-radius: 100%;
+    background-color: #77b7ff;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+p {
+    text-align: center;
+    font-weight: 500;
+}
+
+h4 {
+    font-weight: 500;
+}
+
+
